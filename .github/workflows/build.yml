@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: windows-latest
@@ -13,7 +15,8 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npx electron-builder --win portable --publish never
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
         with:
-          name: exe
-          path: dist/*.exe
+          tag_name: latest
+          name: Distillation
+          files: dist/*.exe
