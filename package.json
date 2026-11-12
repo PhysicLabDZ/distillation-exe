@@ -1,0 +1,17 @@
+{
+  "name": "physiclabdz-sim",
+  "version": "1.0.0",
+  "description": "Distillation Simulation",
+  "main": "main.js",
+  "author": "PhysicLabDZ",
+  "build": {
+    "appId": "dz.physiclab.sim",
+    "productName": "Distillation",
+    "files": ["**/*", "!.github"],
+    "win": { "target": "portable" }
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3"
+  }
+}
