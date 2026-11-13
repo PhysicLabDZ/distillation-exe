@@ -8,7 +8,7 @@ function createWindow() {
     autoHideMenuBar: true
   });
   win.maximize();
-  win.loadFile(path.join(__dirname, 'distillation_v19.html'));
+  win.loadFile(path.join(__dirname, 'index.html'));
 }
 
 app.whenReady().then(createWindow);
